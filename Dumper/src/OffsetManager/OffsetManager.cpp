@@ -99,7 +99,7 @@ namespace Dumper
             LogToStringStream( "BaseEntity", "m_bMoveType", 0x258, ss );
 
             DumpPatternOffset( "ClientState", "m_dwClientState", "engine.dll",
-                               "A1 ? ? ? ? 33 D2 6A ? 6A ? 33 C9 89 B0 08 4E ? ? A1",
+                               "A1 ? ? ? ? 33 D2 6A ? 6A ? 33 C9 89 B0 0C 4E ? ? A1",
                                Remote::SignatureType_t::READ | Remote::SignatureType_t::SUBTRACT, 0x1, 0x0, ss );
 
             DumpPatternOffset( "ClientState", "m_dwLocalPlayerIndex", "engine.dll",
