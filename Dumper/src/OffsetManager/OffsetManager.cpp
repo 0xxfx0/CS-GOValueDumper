@@ -1,9 +1,7 @@
 #include "HOffsetManager.h"
-
 #include <sstream>
 #include <fstream>
 #include <iomanip>
-
 #include "../Utilis/HUtilis.h"
 #include "../NetVarManager/HNetVarManager.h"
 
