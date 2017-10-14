@@ -109,12 +109,12 @@ namespace Dumper
                                Remote::SignatureType_t::READ, 0x2, 0x0, ss );
 
             DumpPatternOffset( "ClientState", "m_dwInGame", "engine.dll",
-                               "8B 80 ? ? ? ? 40 C3",
+                               "83 B8 ? ? ? ? ? 0F 94 C0 C3",
                                Remote::SignatureType_t::READ, 0x2, 0x0, ss );
 
             DumpPatternOffset( "ClientState", "m_dwMaxPlayer", "engine.dll",
                                "A1 ? ? ? ? 8B 80 ? ? ? ? C3 CC CC CC CC 55 8B EC 8B 45 08",
-                               Remote::SignatureType_t::READ, 0x7, 0x0, ss );
+                               Remote::SignatureType_t::READ, 0x1, 0x0, ss );
 
             DumpPatternOffset( "ClientState", "m_dwMapDirectory", "engine.dll",
                                "05 ? ? ? ? C3 CC CC CC CC CC CC CC 80 3D",
@@ -190,21 +190,21 @@ namespace Dumper
 							   "81 F9 ? ? ? ? 75 1D F3 0F 10 05 ? ? ? ? F3 0F 11 44 24 ? 8B 44 24 10 35 ? ? ? ? 89 44 24 08",
 							   Remote::SignatureType_t::READ | Remote::SignatureType_t::SUBTRACT, 0x2, 0x0, ss);
 
-			DumpPatternOffset( "Extra", "m_dwMouseEnable", "client.dll",
-							   "B9 ? ? ? ? FF 50 34 85 C0 75 10",
-								Remote::SignatureType_t::READ | Remote::SignatureType_t::SUBTRACT, 0x1, 0x48, ss );
+            DumpPatternOffset( "Extra", "m_dwMouseEnable", "client.dll",
+                               "B9 ? ? ? ? FF 50 34 85 C0 75 10",
+                               Remote::SignatureType_t::READ | Remote::SignatureType_t::SUBTRACT, 0x1, 0x48, ss );
 
-			DumpPatternOffset( "Extra", "m_dwMouseEnablePtr", "client.dll",
-							   "B9 ? ? ? ? FF 50 34 85 C0 75 10",
-							   Remote::SignatureType_t::READ | Remote::SignatureType_t::SUBTRACT, 0x1, 0x0, ss );
+			DumpPatternOffset("Extra", "m_dwMouseEnablePtr", "client.dll",
+							  "B9 ? ? ? ? FF 50 34 85 C0 75 10",
+							  Remote::SignatureType_t::READ | Remote::SignatureType_t::SUBTRACT, 0x1, 0x0, ss);
 
-			DumpPatternOffset( "Extra", "dwppDirect3DDevice9", "shaderapidx9.dll",
+			DumpPatternOffset("Extra", "dwppDirect3DDevice9", "shaderapidx9.dll",
 							  "A1 ? ? ? ? 50 8B 08 FF 51 0C",
-							  Remote::SignatureType_t::READ | Remote::SignatureType_t::SUBTRACT, 0x1, 0x0, ss );
+							  Remote::SignatureType_t::READ | Remote::SignatureType_t::SUBTRACT, 0x1, 0x0, ss);
 
-			DumpPatternOffset( "Extra", "dwSetClanTag", "engine.dll",
+			DumpPatternOffset("Extra", "dwSetClanTag", "engine.dll",
 							  "53 56 57 8B DA 8B F9 FF 15",
-							  Remote::SignatureType_t::READ | Remote::SignatureType_t::SUBTRACT, 0x0, 0x0, ss );
+							  Remote::SignatureType_t::READ | Remote::SignatureType_t::SUBTRACT, 0x0, 0x0, ss);
 
             std::ofstream( "OffsetManager.txt" ) << ss.str();
         }
