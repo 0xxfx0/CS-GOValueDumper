@@ -1,6 +1,6 @@
 - - - - - - Tool by Y3t1y3t ( uc ) - - - - - - 
 | -> http://www.unknowncheats.me/forum/counterstrike-global-offensive/100856-cs-go-offset-dumper-small-one.html
-| -> Fri Oct 13 21:14:59 2017
+| -> Sat Oct 14 11:38:24 2017
 - -
 
 DT_WeaponCSBase -> m_fAccuracyPenalty: _________ 0x000032B0
@@ -53,9 +53,9 @@ BaseEntity -> m_dwModel: _______________________ 0x0000006C
 BaseEntity -> m_dwIndex: _______________________ 0x00000064
 BaseEntity -> m_dwBoneMatrix: __________________ 0x00002698
 BaseEntity -> m_bMoveType: _____________________ 0x00000258
-ClientState -> m_dwClientState: ________________ 0x00000000
+ClientState -> m_dwClientState: ________________ 0x005A4344
 ClientState -> m_dwLocalPlayerIndex: ___________ 0x00000180
-ClientState -> m_dwInGame: _____________________ 0x00000180
+ClientState -> m_dwInGame: _____________________ 0x00000108
 ClientState -> m_dwMaxPlayer: __________________ 0x00000000
 ClientState -> m_dwMapDirectory: _______________ 0x00000188
 ClientState -> m_dwMapname: ____________________ 0x0000028C
@@ -67,7 +67,7 @@ RadarBase -> m_dwRadarBase: ____________________ 0x04EBEB54
 RadarBase -> m_dwRadarBasePointer: _____________ 0x00000050
 LocalPlayer -> m_dwLocalPlayer: ________________ 0x00AACBFC
 EntityList -> m_dwEntityList: __________________ 0x04A89E5C
-WeaponTable -> m_dwWeaponTable: ________________ 0x6D285C46
+WeaponTable -> m_dwWeaponTable: ________________ 0xB42C5C46
 WeaponTable -> m_dwWeaponTableIndex: ___________ 0x0000026E
 Extra -> m_dwInput: ____________________________ 0x04ED4A20
 Extra -> m_dwGlobalVars: _______________________ 0x005A4048
@@ -79,4 +79,4 @@ Extra -> m_dwSensitivityPtr: ___________________ 0x00AA4F88
 Extra -> m_dwMouseEnable: ______________________ 0x00AB2478
 Extra -> m_dwMouseEnablePtr: ___________________ 0x00AB2430
 Extra -> dwppDirect3DDevice9: __________________ 0x000A1F40
-Extra -> dwSetClanTag: _________________________ 0x22CA5653
+Extra -> dwSetClanTag: _________________________ 0x35955653
