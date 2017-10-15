@@ -1,4 +1,4 @@
-74 6b 72 15 DT_CSPlayerResource : public DT_PlayerResource
+74 6b cb 17 DT_CSPlayerResource : public DT_PlayerResource
 |__m_iPing___________________________________________ -> 0x0AE4 ( void* )
  |__m_iKills_________________________________________ -> 0x0BE8 ( void* )
   |__m_iAssists______________________________________ -> 0x0CEC ( void* )

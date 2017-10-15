@@ -7,6 +7,8 @@
 #include "../Utilis/HUtilis.h"
 #include "../NetVarManager/HNetVarManager.h"
 
+int dllClientAddress;
+
 namespace Dumper
 {
     namespace OffsetManager
@@ -114,7 +116,7 @@ namespace Dumper
 
             DumpPatternOffset( "ClientState", "m_dwMaxPlayer", "engine.dll",
                                "A1 ? ? ? ? 8B 80 ? ? ? ? C3 CC CC CC CC 55 8B EC 8B 45 08",
-                               Remote::SignatureType_t::READ, 0x1, 0x0, ss );
+                               Remote::SignatureType_t::READ, 0x7, 0x0, ss );
 
             DumpPatternOffset( "ClientState", "m_dwMapDirectory", "engine.dll",
                                "05 ? ? ? ? C3 CC CC CC CC CC CC CC 80 3D",
@@ -134,7 +136,7 @@ namespace Dumper
 
             DumpPatternOffset( "EngineRender", "m_dwViewMatrix", "client.dll",
                                "0F 10 05 ? ? ? ? 8D 85 ? ? ? ? B9",
-                               Remote::SignatureType_t::READ | Remote::SignatureType_t::SUBTRACT, 0x3, 0x158, ss );
+                               Remote::SignatureType_t::READ | Remote::SignatureType_t::SUBTRACT, 0x3, 0x176, ss );
 
             DumpPatternOffset( "EngineRender", "m_dwEnginePosition", "engine.dll",
                                "F3 0F 11 15 ? ? ? ? F3 0F 11 0D ? ? ? ? F3 0F 11 05 ? ? ? ? F3 0F 11 3D",
@@ -155,7 +157,7 @@ namespace Dumper
                                Remote::SignatureType_t::READ | Remote::SignatureType_t::SUBTRACT, 0x1, 0x0, ss );
 
             DumpPatternOffset( "WeaponTable", "m_dwWeaponTable", "client.dll",
-                               "8B ? ? ? ? 8B 44 C8 0C 85 C0",
+                               "B9 ? ? ? ? 6A 00 FF 50 08 C3",
                                Remote::SignatureType_t::READ | Remote::SignatureType_t::SUBTRACT, 0x1, 0x0, ss );
 
             DumpPatternOffset( "WeaponTable", "m_dwWeaponTableIndex", "client.dll",
@@ -204,7 +206,7 @@ namespace Dumper
 
 			DumpPatternOffset("Extra", "dwSetClanTag", "engine.dll",
 							  "53 56 57 8B DA 8B F9 FF 15",
-							  Remote::SignatureType_t::READ | Remote::SignatureType_t::SUBTRACT, 0x0, 0x0, ss);
+							  Remote::SignatureType_t::SUBTRACT, 0x0, 0x0, ss);
 
             std::ofstream( "OffsetManager.txt" ) << ss.str();
         }

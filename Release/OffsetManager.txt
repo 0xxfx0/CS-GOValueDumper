@@ -1,6 +1,6 @@
 - - - - - - Tool by Y3t1y3t ( uc ) - - - - - - 
 | -> http://www.unknowncheats.me/forum/counterstrike-global-offensive/100856-cs-go-offset-dumper-small-one.html
-| -> Sat Oct 14 13:40:39 2017
+| -> Sun Oct 15 13:18:06 2017
 - -
 
 DT_WeaponCSBase -> m_fAccuracyPenalty: _________ 0x000032B0
@@ -79,4 +79,4 @@ Extra -> m_dwSensitivityPtr: ___________________ 0x00AA4F88
 Extra -> m_dwMouseEnable: ______________________ 0x00AB2478
 Extra -> m_dwMouseEnablePtr: ___________________ 0x00AB2430
 Extra -> dwppDirect3DDevice9: __________________ 0x000A1F40
-Extra -> dwSetClanTag: _________________________ 0x35955653
+Extra -> dwSetClanTag: _________________________ 0x000848F0
