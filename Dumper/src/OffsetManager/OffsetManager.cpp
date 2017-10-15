@@ -113,7 +113,7 @@ namespace Dumper
                                Remote::SignatureType_t::READ, 0x2, 0x0, ss );
 
             DumpPatternOffset( "ClientState", "m_dwMaxPlayer", "engine.dll",
-                               "A1 ? ? ? ? 8B 80 ? ? ? ? C3 CC CC CC CC 55 8B EC 8B 45 08",
+                               "A1 ? ? ? ? 8B 80 ? ? ? ? C3 CC CC CC CC 55 8B EC 8A 45 08",
                                Remote::SignatureType_t::READ, 0x7, 0x0, ss );
 
             DumpPatternOffset( "ClientState", "m_dwMapDirectory", "engine.dll",
@@ -181,6 +181,11 @@ namespace Dumper
             DumpPatternOffset( "Extra", "m_dwForceAttack", "client.dll",
 							   "89 0D ? ? ? ? 8B 0D ? ? ? ? 8B F2 8B C1 83 CE 04",
                                Remote::SignatureType_t::READ | Remote::SignatureType_t::SUBTRACT, 0x2, 0x0, ss );
+
+			DumpPatternOffset("Extra", "m_dwForceAttack2", "client.dll",
+							  "89 0D ? ? ? ? 8B 0D ? ? ? ? 8B F2 8B C1 83 CE 04",
+							  Remote::SignatureType_t::READ | Remote::SignatureType_t::SUBTRACT, 0x2, 0x12, ss);
+
 
             DumpPatternOffset( "Extra", "m_dwSensitivity", "client.dll",
                                "81 F9 ? ? ? ? 75 1D F3 0F 10 05 ? ? ? ? F3 0F 11 44 24 ? 8B 44 24 10 35 ? ? ? ? 89 44 24 08",
