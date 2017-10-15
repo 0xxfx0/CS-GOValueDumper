@@ -1,6 +1,6 @@
 - - - - - - Tool by Y3t1y3t ( uc ) - - - - - - 
 | -> http://www.unknowncheats.me/forum/counterstrike-global-offensive/100856-cs-go-offset-dumper-small-one.html
-| -> Sun Oct 15 17:08:50 2017
+| -> Sun Oct 15 20:23:12 2017
 - -
 
 DT_WeaponCSBase -> m_fAccuracyPenalty: _________ 0x000032B0
@@ -21,6 +21,7 @@ DT_CSPlayer -> m_flFlashMaxAlpha: ______________ 0x0000A2E4
 DT_CSPlayer -> m_flFlashDuration: ______________ 0x0000A2E8
 DT_CSPlayer -> m_iGlowIndex: ___________________ 0x0000A300
 DT_CSPlayer -> m_angEyeAngles: _________________ 0x0000B22C
+DT_CSPlayer -> m_iFOVStart: ____________________ 0x000031D8
 DT_CSPlayer -> m_iAccount: _____________________ 0x0000B218
 DT_CSPlayer -> m_ArmorValue: ___________________ 0x0000B228
 DT_CSPlayer -> m_bGunGameImmunity: _____________ 0x00003890
@@ -78,9 +79,9 @@ Extra -> m_dwForceJump: ________________________ 0x04F20CE8
 Extra -> m_dwForceAttack: ______________________ 0x02ECC218
 Extra -> m_dwForceAttack2: _____________________ 0x02ECC22A
 Extra -> m_dwForceBackward: ____________________ 0x04F20D18
-Extra -> m_dwForceForward: _____________________ 0xEB5F0800
-Extra -> m_dwForceLeft: ________________________ 0xB282C144
-Extra -> m_dwForceRight: _______________________ 0xEB5F00E4
+Extra -> m_dwForceForward: _____________________ 0xAF110800
+Extra -> m_dwForceLeft: ________________________ 0x7634C144
+Extra -> m_dwForceRight: _______________________ 0xAF1100E4
 Extra -> m_dwGameDir: __________________________ 0x00642BD0
 Extra -> m_dwGameRulesProxy: ___________________ 0x04F8B034
 Extra -> m_dwGetAllClasses: ____________________ 0x04F8B108

@@ -54,6 +54,7 @@ namespace Dumper
 							   pNetVarManager->GetNetVar( "DT_CSPlayer", "m_flFlashDuration" ) + 0x18, ss );
 
             DumpNetVar( "DT_CSPlayer", "m_angEyeAngles", 0x0, ss );
+			DumpNetVar( "DT_CSPlayer", "m_iFOVStart", 0x0, ss );
             DumpNetVar( "DT_CSPlayer", "m_iAccount", 0x0, ss );
             DumpNetVar( "DT_CSPlayer", "m_ArmorValue", 0x0, ss );
             DumpNetVar( "DT_CSPlayer", "m_bGunGameImmunity", 0x0, ss );
