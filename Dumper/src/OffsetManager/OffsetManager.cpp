@@ -47,9 +47,6 @@ namespace Dumper
             DumpNetVar( "DT_BaseEntity", "m_vecOrigin", 0x0, ss );
 			DumpNetVar( "DT_BaseEntity", "m_iTeamNum", 0x0, ss );
 			
-			DumpNetVar( "DT_BasePlayer", "m_viewPunchAngle", 0x0, ss );
-			DumpNetVar( "DT_BasePlayer", "m_hViewModel[0]", 0x0, ss );
-            
             DumpNetVar( "DT_CSPlayer", "m_flFlashMaxAlpha", 0x0, ss );
             DumpNetVar( "DT_CSPlayer", "m_flFlashDuration", 0x0, ss );
 
@@ -86,6 +83,8 @@ namespace Dumper
             DumpNetVar( "DT_BasePlayer", "m_nTickBase", 0x0, ss );
             DumpNetVar( "DT_BasePlayer", "m_vecVelocity[0]", 0x0, ss );
             DumpNetVar( "DT_BasePlayer", "m_szLastPlaceName", 0x0, ss );
+			DumpNetVar( "DT_BasePlayer", "m_viewPunchAngle", 0x0, ss );
+			DumpNetVar( "DT_BasePlayer", "m_hViewModel[0]", 0x0, ss );
 
             LogToStringStream( "DT_Local", "m_vecPunch",
                                pNetVarManager->GetNetVar( "DT_BasePlayer", "m_Local" ) + 0x70, ss );
@@ -133,6 +132,10 @@ namespace Dumper
             DumpPatternOffset( "ClientState", "m_dwViewAngles", "engine.dll",
                                "F3 0F 11 80 ? ? ? ? D9 46 04 D9 05",
                                Remote::SignatureType_t::READ, 0x4, 0x0, ss );
+
+			DumpPatternOffset("ClientState", "dwClientState_IsHLTV", "engine.dll",
+							  "80 BF ? ? ? ? ? 0F 84 ? ? ? ? 32 DB",
+							  Remote::SignatureType_t::READ, 0x2, 0x0, ss);
 
             DumpPatternOffset( "EngineRender", "m_dwViewMatrix", "client.dll",
                                "0F 10 05 ? ? ? ? 8D 85 ? ? ? ? B9",
@@ -188,8 +191,39 @@ namespace Dumper
 							  "89 0D ? ? ? ? 8B 0D ? ? ? ? 8B F2 8B C1 83 CE 04",
 							  Remote::SignatureType_t::READ | Remote::SignatureType_t::SUBTRACT, 0x2, 0x12, ss);
 
+			DumpPatternOffset("Extra", "m_dwForceBackward", "client.dll",
+							  "55 8B EC 51 53 8A 5D 08",
+							  Remote::SignatureType_t::READ | Remote::SignatureType_t::SUBTRACT, 0x287, 0x0, ss);
 
-            DumpPatternOffset( "Extra", "m_dwSensitivity", "client.dll",
+			DumpPatternOffset("Extra", "m_dwForceForward", "client.dll",
+							  "55 8B EC 51 53 8A 5D 08",
+							  Remote::SignatureType_t::READ | Remote::SignatureType_t::SUBTRACT, 0x245, 0x0, ss);
+
+			DumpPatternOffset("Extra", "m_dwForceLeft", "client.dll",
+							  "55 8B EC 51 53 8A 5D 08",
+							  Remote::SignatureType_t::READ | Remote::SignatureType_t::SUBTRACT, 0x465, 0x0, ss);
+
+			DumpPatternOffset("Extra", "m_dwForceRight", "client.dll",
+							  "55 8B EC 51 53 8A 5D 08",
+							  Remote::SignatureType_t::READ | Remote::SignatureType_t::SUBTRACT, 0x512, 0x0, ss);
+			
+			DumpPatternOffset("Extra", "m_dwGameDir", "engine.dll",
+							  "68 ? ? ? ? 8D 85 ? ? ? ? 50 68 ? ? ? ? 68",
+							  Remote::SignatureType_t::READ | Remote::SignatureType_t::SUBTRACT, 0x1, 0x0, ss);
+
+			DumpPatternOffset("Extra", "m_dwGameRulesProxy", "client.dll",
+							  "A1 ? ? ? ? 85 C0 0F 84 ? ? ? ? 80 B8 ? ? ? ? ? 0F 84 ? ? ? ? 0F 10 05",
+							  Remote::SignatureType_t::READ | Remote::SignatureType_t::SUBTRACT, 0x1, 0x0, ss);
+
+			DumpPatternOffset("Extra", "m_dwGetAllClasses", "client.dll",
+							  "A1 ? ? ? ? C3 CC CC CC CC CC CC CC CC CC CC A1 ? ? ? ? B9",
+							  Remote::SignatureType_t::READ | Remote::SignatureType_t::SUBTRACT, 0x1, 0x0, ss);
+
+			DumpPatternOffset("Extra", "m_dwInterfaceLinkList", "client.dll",
+							  "8B 35 ? ? ? ? 57 85 F6 74 ? 8B 7D 08 8B 4E 04 8B C7 8A 11 3A 10",
+							  Remote::SignatureType_t::SUBTRACT, 0x0, 0x0, ss);
+
+			DumpPatternOffset( "Extra", "m_dwSensitivity", "client.dll",
                                "81 F9 ? ? ? ? 75 1D F3 0F 10 05 ? ? ? ? F3 0F 11 44 24 ? 8B 44 24 10 35 ? ? ? ? 89 44 24 08",
                                Remote::SignatureType_t::READ | Remote::SignatureType_t::SUBTRACT, 0x2, 0x44, ss );
 
@@ -204,6 +238,18 @@ namespace Dumper
 			DumpPatternOffset("Extra", "m_dwMouseEnablePtr", "client.dll",
 							  "B9 ? ? ? ? FF 50 34 85 C0 75 10",
 							  Remote::SignatureType_t::READ | Remote::SignatureType_t::SUBTRACT, 0x1, 0x0, ss);
+
+			DumpPatternOffset("Extra", "dwYawPtr", "client.dll",
+							  "81 F9 ? ? ? ? 75 1D F3 0F 10 05 ? ? ? ? F3 0F 11 44 24 ? 8B 44 24 1C 35 ? ? ? ? 89 44 24 18 EB 0B 8B 01 8B 40 30 FF D0 D9 5C 24 18 F3 0F 10 06",
+							  Remote::SignatureType_t::READ | Remote::SignatureType_t::SUBTRACT, 0x2, 0x0, ss);
+
+			DumpPatternOffset("Extra", "dwZoomSensitivityRatioPtr", "client.dll",
+							  "81 F9 ? ? ? ? 75 1A F3 0F 10 05 ? ? ? ? F3 0F 11 45 ? 8B 45 F4 35 ? ? ? ? 89 45 FC EB 0A 8B 01 8B 40 30 FF D0 D9 5D FC A1",
+							  Remote::SignatureType_t::READ | Remote::SignatureType_t::SUBTRACT, 0x2, 0x0, ss);
+
+			DumpPatternOffset("Extra", "dwSendPackets", "engine.dll",
+							  "B3 01 8B 01 8B 40 10 FF D0 84 C0 74 0F 80 BF ? ? ? ? ? 0F 84",
+							  Remote::SignatureType_t::SUBTRACT, 0x1, 0x0, ss);
 
 			DumpPatternOffset("Extra", "dwppDirect3DDevice9", "shaderapidx9.dll",
 							  "A1 ? ? ? ? 50 8B 08 FF 51 0C",

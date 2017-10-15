@@ -1,6 +1,6 @@
 - - - - - - Tool by Y3t1y3t ( uc ) - - - - - - 
 | -> http://www.unknowncheats.me/forum/counterstrike-global-offensive/100856-cs-go-offset-dumper-small-one.html
-| -> Sun Oct 15 14:13:17 2017
+| -> Sun Oct 15 17:08:50 2017
 - -
 
 DT_WeaponCSBase -> m_fAccuracyPenalty: _________ 0x000032B0
@@ -17,8 +17,6 @@ DT_BaseEntity -> m_bSpottedByMask: _____________ 0x0000097C
 DT_BaseEntity -> m_hOwnerEntity: _______________ 0x00000148
 DT_BaseEntity -> m_vecOrigin: __________________ 0x00000134
 DT_BaseEntity -> m_iTeamNum: ___________________ 0x000000F0
-DT_BasePlayer -> m_viewPunchAngle: _____________ 0x00003010
-DT_BasePlayer -> m_hViewModel[0]: ______________ 0x000032DC
 DT_CSPlayer -> m_flFlashMaxAlpha: ______________ 0x0000A2E4
 DT_CSPlayer -> m_flFlashDuration: ______________ 0x0000A2E8
 DT_CSPlayer -> m_iGlowIndex: ___________________ 0x0000A300
@@ -47,6 +45,8 @@ DT_BasePlayer -> m_vecViewOffset[0]: ___________ 0x00000104
 DT_BasePlayer -> m_nTickBase: __________________ 0x00003404
 DT_BasePlayer -> m_vecVelocity[0]: _____________ 0x00000110
 DT_BasePlayer -> m_szLastPlaceName: ____________ 0x00003588
+DT_BasePlayer -> m_viewPunchAngle: _____________ 0x00003010
+DT_BasePlayer -> m_hViewModel[0]: ______________ 0x000032DC
 DT_Local -> m_vecPunch: ________________________ 0x0000301C
 DT_Local -> m_iCrossHairID: ____________________ 0x0000B294
 BaseEntity -> m_bDormant: ______________________ 0x000000E9
@@ -62,6 +62,7 @@ ClientState -> m_dwMapDirectory: _______________ 0x00000188
 ClientState -> m_dwMapname: ____________________ 0x0000028C
 ClientState -> m_dwPlayerInfo: _________________ 0x00005240
 ClientState -> m_dwViewAngles: _________________ 0x00004D10
+ClientState -> dwClientState_IsHLTV: ___________ 0x00004CC8
 EngineRender -> m_dwViewMatrix: ________________ 0x04A7B97A
 EngineRender -> m_dwEnginePosition: ____________ 0x00652F64
 RadarBase -> m_dwRadarBase: ____________________ 0x04EBEB54
@@ -76,10 +77,21 @@ Extra -> m_dwGlowObject: _______________________ 0x04FA6870
 Extra -> m_dwForceJump: ________________________ 0x04F20CE8
 Extra -> m_dwForceAttack: ______________________ 0x02ECC218
 Extra -> m_dwForceAttack2: _____________________ 0x02ECC22A
+Extra -> m_dwForceBackward: ____________________ 0x04F20D18
+Extra -> m_dwForceForward: _____________________ 0xEB5F0800
+Extra -> m_dwForceLeft: ________________________ 0xB282C144
+Extra -> m_dwForceRight: _______________________ 0xEB5F00E4
+Extra -> m_dwGameDir: __________________________ 0x00642BD0
+Extra -> m_dwGameRulesProxy: ___________________ 0x04F8B034
+Extra -> m_dwGetAllClasses: ____________________ 0x04F8B108
+Extra -> m_dwInterfaceLinkList: ________________ 0x006EA594
 Extra -> m_dwSensitivity: ______________________ 0x00AA4FCC
 Extra -> m_dwSensitivityPtr: ___________________ 0x00AA4F88
 Extra -> m_dwMouseEnable: ______________________ 0x00AB2478
 Extra -> m_dwMouseEnablePtr: ___________________ 0x00AB2430
+Extra -> dwYawPtr: _____________________________ 0x00AB20C0
+Extra -> dwZoomSensitivityRatioPtr: ____________ 0x00AB7128
+Extra -> dwSendPackets: ________________________ 0x000CAB8A
 Extra -> dwppDirect3DDevice9: __________________ 0x000A1F40
 Extra -> dwSetClanTag: _________________________ 0x000848F0
 Extra -> m_pStudioHdr: _________________________ 0x0000293C
