@@ -1,6 +1,6 @@
 - - - - - - Tool by Y3t1y3t ( uc ) - - - - - - 
 | -> http://www.unknowncheats.me/forum/counterstrike-global-offensive/100856-cs-go-offset-dumper-small-one.html
-| -> Sun Oct 15 13:43:49 2017
+| -> Sun Oct 15 14:13:17 2017
 - -
 
 DT_WeaponCSBase -> m_fAccuracyPenalty: _________ 0x000032B0
@@ -16,8 +16,9 @@ DT_BaseEntity -> m_bSpotted: ___________________ 0x00000939
 DT_BaseEntity -> m_bSpottedByMask: _____________ 0x0000097C
 DT_BaseEntity -> m_hOwnerEntity: _______________ 0x00000148
 DT_BaseEntity -> m_vecOrigin: __________________ 0x00000134
-DT_BaseEntity -> m_viewPunchAngle: _____________ 0x00000000
 DT_BaseEntity -> m_iTeamNum: ___________________ 0x000000F0
+DT_BasePlayer -> m_viewPunchAngle: _____________ 0x00003010
+DT_BasePlayer -> m_hViewModel[0]: ______________ 0x000032DC
 DT_CSPlayer -> m_flFlashMaxAlpha: ______________ 0x0000A2E4
 DT_CSPlayer -> m_flFlashDuration: ______________ 0x0000A2E8
 DT_CSPlayer -> m_iGlowIndex: ___________________ 0x0000A300

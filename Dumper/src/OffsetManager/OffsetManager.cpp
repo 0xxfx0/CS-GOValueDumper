@@ -45,14 +45,16 @@ namespace Dumper
             DumpNetVar( "DT_BaseEntity", "m_bSpottedByMask", 0x0, ss );
             DumpNetVar( "DT_BaseEntity", "m_hOwnerEntity", 0x0, ss );
             DumpNetVar( "DT_BaseEntity", "m_vecOrigin", 0x0, ss );
-			DumpNetVar( "DT_BaseEntity", "m_viewPunchAngle", 0x0, ss );
-            DumpNetVar( "DT_BaseEntity", "m_iTeamNum", 0x0, ss );
-
+			DumpNetVar( "DT_BaseEntity", "m_iTeamNum", 0x0, ss );
+			
+			DumpNetVar( "DT_BasePlayer", "m_viewPunchAngle", 0x0, ss );
+			DumpNetVar( "DT_BasePlayer", "m_hViewModel[0]", 0x0, ss );
+            
             DumpNetVar( "DT_CSPlayer", "m_flFlashMaxAlpha", 0x0, ss );
             DumpNetVar( "DT_CSPlayer", "m_flFlashDuration", 0x0, ss );
 
             LogToStringStream( "DT_CSPlayer", "m_iGlowIndex",
-                               pNetVarManager->GetNetVar( "DT_CSPlayer", "m_flFlashDuration" ) + 0x18, ss );
+							   pNetVarManager->GetNetVar( "DT_CSPlayer", "m_flFlashDuration" ) + 0x18, ss );
 
             DumpNetVar( "DT_CSPlayer", "m_angEyeAngles", 0x0, ss );
             DumpNetVar( "DT_CSPlayer", "m_iAccount", 0x0, ss );
