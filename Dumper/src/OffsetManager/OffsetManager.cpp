@@ -7,8 +7,6 @@
 #include "../Utilis/HUtilis.h"
 #include "../NetVarManager/HNetVarManager.h"
 
-int dllClientAddress;
-
 namespace Dumper
 {
     namespace OffsetManager
