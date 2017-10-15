@@ -205,6 +205,10 @@ namespace Dumper
 			DumpPatternOffset("Extra", "dwSetClanTag", "engine.dll",
 							  "53 56 57 8B DA 8B F9 FF 15",
 							  Remote::SignatureType_t::SUBTRACT, 0x0, 0x0, ss);
+			
+			DumpPatternOffset("Extra", "m_pStudioHdr", "client.dll",
+							  "8B B6 ? ? ? ? 85 F6 74 05 83 3E 00 75 02 33 F6 F3 0F 10 44 24",
+							  Remote::SignatureType_t::READ, 0x02, 0x00, ss);
 
             std::ofstream( "OffsetManager.txt" ) << ss.str();
         }
