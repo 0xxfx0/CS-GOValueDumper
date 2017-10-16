@@ -5,6 +5,8 @@
 #include <sstream>
 #include <fstream>
 
+std::stringstream ss;
+
 namespace Dumper
 {
     namespace NetVarManager
@@ -113,7 +115,7 @@ namespace Dumper
         {
             auto firstclass = pProcess->FindPattern( "client.dll", "44 54 5F 54 45 57 6F 72 6C 64 44 65 63 61 6C", 0, 0, 0 );
 
-            std::stringstream ss;
+            //std::stringstream ss;
             for( auto i = 0; i < 4; ++i ) {
                 ss << std::hex << std::setw(2) << std::setfill('0') << ( ( firstclass >> 8 * i ) & 0xFF ) << " ";
             }
@@ -140,6 +142,7 @@ namespace Dumper
             for( auto& table : _tables ) {
 
                 auto first = table.second[0].first[0] == 'D';
+
                 ss << table.first;
 
                 for( auto& prop : table.second ) {
