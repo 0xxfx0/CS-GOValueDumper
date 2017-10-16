@@ -1,6 +1,6 @@
 - - - - - - Tool by Y3t1y3t ( uc ) - - - - - - 
 | -> http://www.unknowncheats.me/forum/counterstrike-global-offensive/100856-cs-go-offset-dumper-small-one.html
-| -> Mon Oct 16 12:30:42 2017
+| -> Mon Oct 16 19:24:16 2017
 - -
 
 DT_WeaponCSBase -> m_fAccuracyPenalty: _________ 0x000032B0
@@ -57,13 +57,13 @@ BaseEntity -> m_dwBoneMatrix: __________________ 0x00002698
 BaseEntity -> m_bMoveType: _____________________ 0x00000258
 ClientState -> m_dwClientState: ________________ 0x005A4344
 ClientState -> m_dwLocalPlayerIndex: ___________ 0x00000180
-ClientState -> m_dwInGame: _____________________ 0x00000108
-ClientState -> m_dwMaxPlayer: __________________ 0x00000310
-ClientState -> m_dwMapDirectory: _______________ 0x00000188
 ClientState -> m_dwMapname: ____________________ 0x0000028C
+ClientState -> m_dwMapDirectory: _______________ 0x00000188
+ClientState -> m_dwMaxPlayer: __________________ 0x00000310
 ClientState -> m_dwPlayerInfo: _________________ 0x00005240
+ClientState -> m_dwClientState_State: __________ 0x00000108
 ClientState -> m_dwViewAngles: _________________ 0x00004D10
-ClientState -> dwClientState_IsHLTV: ___________ 0x00004CC8
+ClientState -> m_dwClientState_IsHLTV: _________ 0x00004CC8
 EngineRender -> m_dwViewMatrix: ________________ 0x04A7B97A
 EngineRender -> m_dwEnginePosition: ____________ 0x00652F64
 RadarBase -> m_dwRadarBase: ____________________ 0x04EBEB54
